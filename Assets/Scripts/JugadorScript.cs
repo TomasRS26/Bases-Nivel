@@ -19,6 +19,8 @@ public class JugadorScript : MonoBehaviour
     bool Agachado = false;
     bool Escalando = false;
     bool Cayendo = false;
+
+    [SerializeField] GameObject Luz;
     //Variables
 
     //Vector de movimiento personaje
@@ -37,10 +39,30 @@ public class JugadorScript : MonoBehaviour
     void Update()
     {
         MoverJugador();
+
     }
 
     void MoverJugador ()
     {
+        Debug.Log(VelocidadJugador);
+
+        //activacion provisional de rocas flotantes
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            GameObject RocaReferencia = GameObject.Find("roca flotante");
+            RocaFlotanteScript script = RocaReferencia.GetComponent<RocaFlotanteScript>();
+            script.ActivarRocaFlotante();
+        }
+        else if (Input.GetKeyDown(KeyCode.O))
+        {
+            GameObject RocaReferencia = GameObject.Find("roca flotante");
+            RocaFlotanteScript script = RocaReferencia.GetComponent<RocaFlotanteScript>();
+            script.DesactivarRocaFlotante();
+        }
+
+
+
         //Movimiento normal
 
         VectorMovimiento.x = Input.GetAxis("Horizontal") * VelocidadJugador;
@@ -69,11 +91,12 @@ public class JugadorScript : MonoBehaviour
         if (Cayendo == true)
         {
             VectorMovimiento.y -= Gravedad * Time.deltaTime;
-            Debug.Log("Cayendo");
+            VelocidadJugador = VelocidadCayendo;
+
         }
         else if(Cayendo == false)
         {
-            Debug.Log("En tierra");
+            VelocidadJugador = Velocidad;
         }
 
 
@@ -140,4 +163,5 @@ public class JugadorScript : MonoBehaviour
             VectorMovimiento.y = FuerzaSalto;
         }
     }
+
 }
