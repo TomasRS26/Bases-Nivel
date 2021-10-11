@@ -39,12 +39,11 @@ public class JugadorScript : MonoBehaviour
     void Update()
     {
         MoverJugador();
-
     }
 
     void MoverJugador ()
     {
-        Debug.Log(VelocidadJugador);
+        
 
         //activacion provisional de rocas flotantes
 
@@ -144,7 +143,7 @@ public class JugadorScript : MonoBehaviour
 
     }
 
-    //Escaleras y lianas
+    //Triggers
 
     private void OnTriggerEnter(Collider other)
     {

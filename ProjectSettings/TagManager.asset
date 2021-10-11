@@ -7,6 +7,7 @@ TagManager:
   - Escaleras y Lianas
   - Rocas flotantes
   - lava
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
