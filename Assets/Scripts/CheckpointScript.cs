@@ -4,44 +4,21 @@ using UnityEngine;
 
 public class CheckpointScript : MonoBehaviour
 {
-    // GameObject para referenciar el objeto de checkpoint
-    public GameObject ReferenciaCheck;
+    public GameObject objetivoSpawn;
+    public GameObject jugador;
 
-
-    //Vector para guardar posición de respawn
-    Vector3 PuntoSpawn;
-
-
+    void OnTriggerEnter(Collider other)
+    {
+        jugador.transform.position = objetivoSpawn.transform.position;
+    }
     void Start()
     {
-        //configuracion del punto de spawn al iniciar la partida, el cual es el inicio del nivel mismo
-        PuntoSpawn = gameObject.transform.position;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Activadores provisionales
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            MuerteJugador();
-        }
-     
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            RecogerCheckpoint();
-        }
-    }
-
-    void MuerteJugador()
-    {
-        gameObject.transform.position = PuntoSpawn;
-    }
-
-    void RecogerCheckpoint()
-    {
-        PuntoSpawn = ReferenciaCheck.transform.position;
-        Destroy(ReferenciaCheck);
+        
     }
 }

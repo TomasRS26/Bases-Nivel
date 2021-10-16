@@ -43,24 +43,6 @@ public class JugadorScript : MonoBehaviour
 
     void MoverJugador ()
     {
-        
-
-        //activacion provisional de rocas flotantes
-
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            GameObject RocaReferencia = GameObject.Find("roca flotante");
-            RocaFlotanteScript script = RocaReferencia.GetComponent<RocaFlotanteScript>();
-            script.ActivarRocaFlotante();
-        }
-        else if (Input.GetKeyDown(KeyCode.O))
-        {
-            GameObject RocaReferencia = GameObject.Find("roca flotante");
-            RocaFlotanteScript script = RocaReferencia.GetComponent<RocaFlotanteScript>();
-            script.DesactivarRocaFlotante();
-        }
-
-
 
         //Movimiento normal
 
@@ -162,5 +144,4 @@ public class JugadorScript : MonoBehaviour
             VectorMovimiento.y = FuerzaSalto;
         }
     }
-
 }

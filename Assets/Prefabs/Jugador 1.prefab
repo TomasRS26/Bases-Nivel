@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 2655558214006047028}
   - component: {fileID: 2655558214006047051}
   - component: {fileID: 2655558214006047050}
-  - component: {fileID: 7489957873628703479}
   m_Layer: 3
   m_Name: Jugador 1
   m_TagString: Player
@@ -113,7 +112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2655558214006047049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 1.46, z: -6.27}
+  m_LocalPosition: {x: -102.16, y: 1.88, z: -5.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2655558213900616320}
@@ -222,19 +221,6 @@ MonoBehaviour:
   VelocidadSaltoAgachado: 4
   Gravedad: 15
   Luz: {fileID: 7360266079804415316, guid: 14ee66f2635624b4cba7fae93770f9ff, type: 3}
---- !u!114 &7489957873628703479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2655558214006047049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87afd0b7101efd6438430e917a392b95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ReferenciaCheck: {fileID: 870099913672617929, guid: 53d11c2a75acd0b4a84cf4fb47f68cc0, type: 3}
 --- !u!1001 &2655558213647812279
 PrefabInstance:
   m_ObjectHideFlags: 0

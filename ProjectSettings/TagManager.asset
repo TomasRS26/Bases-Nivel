@@ -5,9 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Escaleras y Lianas
-  - Rocas flotantes
-  - lava
   - Checkpoint
+  - Rocas
+  - ColisionadorJugador
+  - Rocas flotantes
+  - Lava
   layers:
   - Default
   - TransparentFX
